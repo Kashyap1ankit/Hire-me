@@ -32,7 +32,7 @@ export default function Navbar({ className }: { className?: string }) {
         />
       </Link>
 
-      <Link href={"#hire"}>
+      <Link href={"/contact"}>
         <TextComp
           text={"Hire"}
           className="cursor-pointer text-white opacity-75"
