@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Navbar({ className }: { className?: string }) {
   return (
-    <div className="flex justify-evenly fixed top-4  bg-navPrimary p-4 rounded-md xsm:w-11/12 xsm:mx-4 md:w-fit md:inset-x-1/4 lg:inset-x-1/3 xl:w-fit xl:mx-28 ">
+    <div className="flex justify-evenly fixed top-4  bg-navPrimary p-4 rounded-md xsm:w-11/12 xsm:mx-4 md:w-fit md:inset-x-1/4 lg:inset-x-1/3 xl:w-fit xl:mx-28 z-50">
       <Link href={"#home"}>
         <TextComp
           text={"Home"}

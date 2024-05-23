@@ -1,19 +1,20 @@
-import { Button } from "../ui/moving-border";
+"use client";
 
 export default function ButtonComp({
   text,
   className,
-  onClick,
+  icon,
+  btnClassName,
 }: {
   text: string;
   className: string;
-  onClick?: () => void;
+  icon?: string;
+  btnClassName?: string;
 }) {
   return (
-    <div className="mx-auto w-fit mt-12" onClick={onClick}>
-      <Button borderRadius="1rem" className={className}>
-        {text}
-      </Button>
+    <div className={`flex justify-evenly + ${className}`}>
+      {icon ? <img src={`icons/${icon}`} /> : ""}
+      <button className={btnClassName}>{text}</button>
     </div>
   );
 }
