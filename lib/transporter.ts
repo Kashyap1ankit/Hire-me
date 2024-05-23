@@ -2,6 +2,9 @@ import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
   host: "sandbox.smtp.mailtrap.io",
+  tls: {
+    ciphers: "SSLv3",
+  },
   port: 2525,
   secure: false,
   auth: {
