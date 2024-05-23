@@ -95,7 +95,6 @@ export default function Skills() {
       />
 
       <div className="w-full flex justify-center">
-        {/* <CardStackDemo /> */}
         <div className="xsm:mx-2  grid xsm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {tech.map((e: { id: number; name: string; logo: string }) => {
             return (
@@ -113,9 +112,9 @@ export default function Skills() {
                   right: 0,
                   bottom: 0,
                 }}
+                key={e.id}
               >
                 <ButtonComp
-                  key={e.id}
                   text={e.name}
                   icon={e.logo}
                   className={`border-${
