@@ -5,6 +5,7 @@ import { TracingBeam } from "../ui/tracing-beam";
 import TextComp from "../re-use/text";
 
 interface cardDetails {
+  id: number;
   title: string;
   description: string;
   logo: string[];
@@ -14,6 +15,7 @@ interface cardDetails {
 export function TracingBeamDemo() {
   const data: cardDetails[] = [
     {
+      id: 0,
       title: "TechTalkies",
       description:
         "This is fullstack Blogging website where user can signup , login to create blogs . User can Read other person blogs. Can get help from ai to write their blogs Live. Aproper text editor is there to write blogs in a formatted way. User can update their details and can easily delete their account posts",
@@ -29,6 +31,7 @@ export function TracingBeamDemo() {
     },
 
     {
+      id: 1,
       title: "PayUsVia",
       description:
         "This is payment website . Here user can register. They can find all users on platform and can search for any user and send them money • Real time user authentication and authorization is done u the jwt and passwords are salted and hashed to ensure user details protection • User can see the transaction history and can delete account",
@@ -58,6 +61,7 @@ export function TracingBeamDemo() {
           {data.map((e: cardDetails) => {
             return (
               <ProjectCard
+                key={e.id}
                 title={e.title}
                 description={e.description}
                 logo={e.logo}

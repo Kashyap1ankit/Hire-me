@@ -18,6 +18,7 @@ export default function ProjectCard({
   image: string;
   redirectLink: string;
 }) {
+  let id = 1;
   return (
     <div className="xsm:w-full md:w-3/4 lg:w-1/2 border-2 rounded-md mx-auto bg-black text-white mb-12 mt-12">
       <ImageComp src={image} className="w-full rounded-md" />
@@ -37,7 +38,13 @@ export default function ProjectCard({
       <div className="flex justify-evenly mt-4 mb-4">
         <div className="flex w-2/3 ">
           {logo.map((e) => {
-            return <ImageComp src={e} className="ml-2 xsm:size-6 sm:size-8" />;
+            return (
+              <ImageComp
+                key={id++}
+                src={e}
+                className="ml-2 xsm:size-6 sm:size-8"
+              />
+            );
           })}
         </div>
 
