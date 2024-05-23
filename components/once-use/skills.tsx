@@ -115,6 +115,7 @@ export default function Skills() {
                 key={e.id}
               >
                 <ButtonComp
+                  key={e.id}
                   text={e.name}
                   icon={e.logo}
                   className={`border-${
