@@ -34,7 +34,7 @@ export default function Navbar({ className }: { className?: string }) {
 
       <Link href={"/contact"}>
         <TextComp
-          text={"Hire"}
+          text={"Connect"}
           className="cursor-pointer text-white opacity-75"
           motion={true}
         />

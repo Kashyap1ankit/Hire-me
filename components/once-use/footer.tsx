@@ -35,7 +35,7 @@ export default function Footer() {
 
         <div className="mr-12">
           <Link href="/contact">
-            <TextComp text="Hire Me" className="text-white xl:text-xl" />
+            <TextComp text="Connect" className="text-white xl:text-xl" />
           </Link>
         </div>
       </div>

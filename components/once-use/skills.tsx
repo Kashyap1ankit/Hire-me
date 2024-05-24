@@ -105,13 +105,6 @@ export default function Skills() {
                 transition={{
                   duration: 1,
                 }}
-                drag
-                dragConstraints={{
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                }}
                 key={e.id}
               >
                 <ButtonComp
