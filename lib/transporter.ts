@@ -8,16 +8,12 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async function SendEmail(
-  dataComing: contactType
-): Promise<number> {
-  const response = await new Promise((resolve, reject) => {
-    try {
-      resend.emails.send({
-        from: "Acme <onboarding@resend.dev>",
-        to: ["kashankityap@gmail.com"],
-        subject: dataComing.subject,
-        html: ` <!DOCTYPE html>
+export default async function SendEmail(dataComing: contactType) {
+  const { data, error } = await resend.emails.send({
+    from: "Acme <onboarding@resend.dev>",
+    to: ["kashankityap@gmail.com"],
+    subject: dataComing.subject,
+    html: ` <!DOCTYPE html>
        <html lang="en">
        <head>
          <meta charset="UTF-8">
@@ -33,16 +29,8 @@ export default async function SendEmail(
          </main>
        </body>
        </html>`,
-      });
-      resolve("solved");
-      return 200;
-    } catch (error) {
-      reject("not sent");
-      return 0;
-    }
   });
-
-  if (!response) {
+  if (error) {
     return 0;
   }
 
