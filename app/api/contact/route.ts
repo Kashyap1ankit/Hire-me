@@ -5,6 +5,7 @@ interface contactType {
   from: string;
   subject: string;
   text: string;
+  company: string;
 }
 
 export async function POST(req: NextRequest, res: NextResponse) {
