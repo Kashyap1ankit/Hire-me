@@ -10,6 +10,7 @@ interface contactType {
   from: string;
   subject: string;
   text: string;
+  company: string;
 }
 
 export default function Contact() {
@@ -74,6 +75,15 @@ export default function Contact() {
           {...register("from", { required: true })}
         />
         {errors.from && <span>This field is required</span>}
+
+        <input
+          type="text"
+          className="border-2 rounded-md border-gray p-2 xsm:p-1 w-full mb-4"
+          placeholder="Your Company / Personal Name"
+          {...register("company", { required: true })}
+        />
+        {errors.from && <span>This field is required</span>}
+
         <input
           type="text"
           className="border-2 rounded-md border-gray p-2 xsm:p-1 w-full mb-4"

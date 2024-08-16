@@ -12,7 +12,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   const response = await SendEmail(data);
 
-  if (response) {
+  if (response.status === 200) {
     return Response.json({
       message: "done",
       status: 200,
