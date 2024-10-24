@@ -3,6 +3,7 @@ import ProjectCard from "../re-use/projectCard";
 import React from "react";
 import { TracingBeam } from "../ui/tracing-beam";
 import TextComp from "../re-use/text";
+import NewCard from "../re-use/new-card";
 
 interface cardDetails {
   id: number;
@@ -60,7 +61,7 @@ export function TracingBeamDemo() {
         <div>
           {data.map((e: cardDetails) => {
             return (
-              <ProjectCard
+              <NewCard
                 key={e.id}
                 title={e.title}
                 description={e.description}
@@ -72,13 +73,6 @@ export function TracingBeamDemo() {
           })}
         </div>
       </TracingBeam>
-
-      {/* see more  */}
-      {/* <ButtonComp
-        text="See More"
-        className=" w-fit mx-auto mb-12 "
-        btnClassName="py-3 px-2 bg-black text-white rounded-md"
-      /> */}
     </div>
   );
 }

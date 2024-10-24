@@ -3,12 +3,13 @@
 import Link from "next/link";
 import ImageComp from "../re-use/image";
 import TextComp from "../re-use/text";
+import { Discord } from "@/components/ui/discord";
 
 export default function Footer() {
   return (
     <div>
       <hr />
-      <div className="mt-0 flex justify-between items-center">
+      <div className="mt-0 flex flex-col md:flex-row justify-between items-center">
         <div className="flex mt-4 mb-4">
           <Link
             href="https://discord.com/channels/1222885370551861268"
@@ -34,9 +35,14 @@ export default function Footer() {
         </div>
 
         <div className="mr-12">
-          <Link href="/contact">
-            <TextComp text="Connect" className="text-white xl:text-xl" />
-          </Link>
+          <Discord
+            userId="982680541885263883"
+            userName="kashyap1ankit"
+            activityDetailClass="text-cyan-300 text-lg"
+            activityDescriptionClass="text-[#ffbe6f]"
+            progressBarClassName="bg-[#ffbe6f]"
+            localTimeClass="text-green-500"
+          />
         </div>
       </div>
     </div>

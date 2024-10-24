@@ -12,9 +12,9 @@ export default function ButtonComp({
   btnClassName?: string;
 }) {
   return (
-    <div className={`flex justify-evenly + ${className}`}>
-      {icon ? <img src={`icons/${icon}`} /> : ""}
+    <div className={`flex gap-4 justify-center items-center + ${className}`}>
       <button className={btnClassName}>{text}</button>
+      {icon ? <img src={`icons/${icon}`} /> : ""}
     </div>
   );
 }

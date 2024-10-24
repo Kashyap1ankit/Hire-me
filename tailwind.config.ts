@@ -61,6 +61,7 @@ const config: Config = {
       scroll:
         "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       spotlight: "spotlight 2s ease .75s 1 forwards",
+      float: "smooth 3s ease-in-out infinite",
     },
     keyframes: {
       scroll: {
@@ -77,6 +78,14 @@ const config: Config = {
           opacity: "1",
           transform: "translate(-50%,-40%) scale(1)",
         },
+      },
+
+      smooth: {
+        "0%": { transform: "translateY(-5px)" },
+
+        "50%": { transform: "translateY(5px)" },
+
+        "100%": { transform: "translateY(-5px)" },
       },
     },
   },
